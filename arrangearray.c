@@ -13,21 +13,14 @@ void main() {
         printf("ENTER THE elements :");
         scanf("%d",&arr[i]);
     }
-    int j,k,a,b;
+    int j,k,a;
     for (j=0;j<size;j++) {
         for (k=0;k<size;k++) {
             if (arr[j] != arr[k]) {
-                if (arr[j] > arr[k]) {
-                    a = arr[j];
-                    b = arr[k];
-                    arr[j] = a;
-                    arr[k] = b;
-                }
-                else {
-                    a = arr[j];
-                    b = arr[k];
-                    arr[j] = b;
-                    arr[k] = a;
+                if (arr[j]<arr[k]) {
+                	a = arr[j];
+                    arr[j] = arr[k];
+                    arr[k] = a;     
                 }
             }     
             else { 
