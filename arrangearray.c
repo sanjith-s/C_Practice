@@ -18,15 +18,8 @@ void main() {
         for (k=0;k<size;k++) {
             if (arr[j] != arr[k]) {
                 if (arr[j] > arr[k]) {
-                    a = arr[j];
-                    b = arr[k];
-                    arr[j] = a;
-                    arr[k] = b;
-                }
-                else {
-                    a = arr[j];
-                    b = arr[k];
-                    arr[j] = b;
+                    a = arr[k];
+                    arr[k] = arr[j];
                     arr[k] = a;
                 }
             }     
