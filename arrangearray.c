@@ -17,10 +17,17 @@ void main() {
     for (j=0;j<size;j++) {
         for (k=0;k<size;k++) {
             if (arr[j] != arr[k]) {
+<<<<<<< HEAD
                 if (arr[j]<arr[k]) {
                 	a = arr[j];
                     arr[j] = arr[k];
                     arr[k] = a;     
+=======
+                if (arr[j] > arr[k]) {
+                    a = arr[k];
+                    arr[k] = arr[j];
+                    arr[k] = a;
+>>>>>>> 34f0ed1bbcf73accf8c47abf965d1ad2753eeede
                 }
             }     
             else { 
