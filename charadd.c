@@ -1,8 +1,8 @@
-//C Program to delete a character in a string
+//C Program to add a character after a reference character in a string
 
 #include<stdio.h>
 
-void main() {
+void main(){
     char array[256], temp;
     int counter1;
     printf("Enter the string : ");
@@ -10,20 +10,24 @@ void main() {
         array[counter1] = temp;
     }
     array[counter1] = '\0';
-    char chk;
-    printf("Enter the character to remove : ");
+    char chk, add;
+    printf("Enter the reference character : ");
     scanf("%c",&chk);
-    int i;
+    getchar();
+    printf("Enter the character to add : ");
+    scanf("%c",&add);
+    int i, j, null = counter1;
     for ( i = 0; array[i] != '\0'; i++) {
         if (array[i] == chk) {
-        	int j;
-            for (j = i; j < counter1; j++ ) {
-                array[j] = array[j+1];
+            for ( j = counter1; j > i; j-- ) {
+                array[j] = array[j-1];
             }
-            i--;
+            counter1++;
+            null = counter1;
+            array[null] = '\0';
+            array[i+1] = add;
         }
     }
-    array[i] = '\0';
     int k;
     for (k=0; array[k] != '\0'; k++) {
         printf("%c",array[k]);
